@@ -20,17 +20,13 @@ repositories {
     mavenCentral()
 }
 
-dependencies {
-    implementation(kotlin("stdlib-jdk8"))
-}
-
 gradlePlugin {
     plugins {
         create("utf8") {
-            id = "${group}.${name}"
+            id = "$group.$name"
             displayName = "Gradle UTF-8 plugin"
             description = project.description
-            implementationClass = "${group}.utf8.Utf8Plugin"
+            implementationClass = "$group.utf8.Utf8Plugin"
         }
     }
 }
