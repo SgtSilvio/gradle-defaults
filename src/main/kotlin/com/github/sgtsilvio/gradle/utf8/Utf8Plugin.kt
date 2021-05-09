@@ -5,6 +5,7 @@ import org.gradle.api.Project
 import org.gradle.api.tasks.compile.JavaCompile
 import org.gradle.api.tasks.javadoc.Javadoc
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
+import org.gradle.kotlin.dsl.withType
 
 /**
  * @author Silvio Giebl
@@ -12,13 +13,13 @@ import org.gradle.external.javadoc.StandardJavadocDocletOptions
 class Utf8Plugin : Plugin<Project> {
 
     override fun apply(project: Project) {
-        project.tasks.withType(JavaCompile::class.java).configureEach {
-            it.options.encoding = "UTF-8"
+        project.tasks.withType<JavaCompile> {
+            options.encoding = "UTF-8"
         }
-        project.tasks.withType(Javadoc::class.java).configureEach {
-            it.options.encoding = "UTF-8"
-            (it.options as StandardJavadocDocletOptions).docEncoding = "UTF-8"
-            (it.options as StandardJavadocDocletOptions).charSet = "UTF-8"
+        project.tasks.withType<Javadoc> {
+            options.encoding = "UTF-8"
+            (options as StandardJavadocDocletOptions).docEncoding = "UTF-8"
+            (options as StandardJavadocDocletOptions).charSet = "UTF-8"
         }
     }
 }
