@@ -4,7 +4,7 @@
 
 Gradle plugin that automatically configures tasks to use UTF-8.
 
-## Example
+## How to Use
 
 ```kotlin
 plugins {
