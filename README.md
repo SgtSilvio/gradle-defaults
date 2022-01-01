@@ -1,4 +1,4 @@
-# Gradle UTF-8 Plugin
+# Gradle Defaults Plugin
 
 [![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/com.github.sgtsilvio.gradle.defaults?color=brightgreen&style=for-the-badge)](https://plugins.gradle.org/plugin/com.github.sgtsilvio.gradle.defaults)
 
