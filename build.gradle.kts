@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.sgtsilvio.gradle"
-description = "Gradle plugin that automatically configures tasks to use UTF-8"
+description = "Gradle plugin that automatically configures sensible defaults"
 
 java {
     toolchain {
@@ -18,17 +18,17 @@ repositories {
 
 gradlePlugin {
     plugins {
-        create("utf8") {
+        create("defaults") {
             id = "$group.$name"
-            displayName = "Gradle UTF-8 plugin"
+            displayName = "Gradle Defaults plugin"
             description = project.description
-            implementationClass = "$group.utf8.Utf8Plugin"
+            implementationClass = "$group.defaults.DefaultsPlugin"
         }
     }
 }
 
 pluginBundle {
-    website = "https://github.com/SgtSilvio/gradle-utf8"
-    vcsUrl = "https://github.com/SgtSilvio/gradle-utf8.git"
-    tags = listOf("utf8", "compile-utf8", "javadoc-utf8")
+    website = "https://github.com/SgtSilvio/gradle-defaults"
+    vcsUrl = "https://github.com/SgtSilvio/gradle-defaults.git"
+    tags = listOf("defaults", "normalization", "utf8")
 }

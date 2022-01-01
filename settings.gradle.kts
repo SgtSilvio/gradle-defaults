@@ -1,4 +1,4 @@
-rootProject.name = "gradle-utf8"
+rootProject.name = "gradle-defaults"
 
 pluginManagement {
     plugins {
