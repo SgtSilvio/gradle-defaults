@@ -20,7 +20,7 @@ gradlePlugin {
     plugins {
         create("defaults") {
             id = "$group.$name"
-            displayName = "Gradle Defaults plugin"
+            displayName = "Gradle defaults plugin"
             description = project.description
             implementationClass = "$group.defaults.DefaultsPlugin"
         }
