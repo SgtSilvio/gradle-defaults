@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "com.github.sgtsilvio.gradle"
-description = "Gradle plugin that automatically configures sensible defaults"
+description = "Gradle plugin that configures sensible defaults"
 
 java {
     toolchain {
