@@ -6,6 +6,7 @@ import org.gradle.api.plugins.jvm.JvmTestSuite
 import org.gradle.api.tasks.bundling.AbstractArchiveTask
 import org.gradle.api.tasks.compile.JavaCompile
 import org.gradle.api.tasks.javadoc.Javadoc
+import org.gradle.api.tasks.testing.Test
 import org.gradle.external.javadoc.StandardJavadocDocletOptions
 import org.gradle.kotlin.dsl.configure
 import org.gradle.kotlin.dsl.getByType
@@ -21,6 +22,7 @@ class DefaultsPlugin : Plugin<Project> {
     override fun apply(project: Project) {
         configureUtf8(project)
         configureReproducibleArtifacts(project)
+        configureGranularTestReports(project)
         project.plugins.withId("org.gradle.idea") {
             project.plugins.withId("org.gradle.jvm-test-suite") {
                 configureIdeaTestSources(project)
@@ -45,6 +47,14 @@ class DefaultsPlugin : Plugin<Project> {
         project.tasks.withType<AbstractArchiveTask>().configureEach {
             isPreserveFileTimestamps = false
             isReproducibleFileOrder = true
+        }
+    }
+
+    private fun configureGranularTestReports(project: Project) {
+        project.tasks.withType<Test>().configureEach {
+            reports {
+                junitXml.isOutputPerTestCase = true
+            }
         }
     }
 
