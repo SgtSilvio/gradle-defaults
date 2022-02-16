@@ -6,7 +6,7 @@ plugins {
     alias(libs.plugins.metadata)
 }
 
-group = "com.github.sgtsilvio.gradle"
+group = "io.github.sgtsilvio.gradle"
 description = "Gradle plugin that configures sensible defaults"
 
 metadata {
