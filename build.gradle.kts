@@ -1,7 +1,8 @@
+@Suppress("DSL_SCOPE_VIOLATION")
 plugins {
     `kotlin-dsl`
     `maven-publish`
-    id("com.gradle.plugin-publish")
+    alias(libs.plugins.plugin.publish)
 }
 
 group = "com.github.sgtsilvio.gradle"

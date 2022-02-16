@@ -1,0 +1,2 @@
+[plugins]
+plugin-publish = { id = "com.gradle.plugin-publish", version = "0.20.0" }
