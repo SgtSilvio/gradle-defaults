@@ -1,5 +1,6 @@
 plugins {
     `kotlin-dsl`
+    `maven-publish`
     id("com.gradle.plugin-publish")
 }
 
