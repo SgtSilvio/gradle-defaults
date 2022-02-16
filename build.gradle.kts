@@ -3,10 +3,28 @@ plugins {
     `kotlin-dsl`
     `maven-publish`
     alias(libs.plugins.plugin.publish)
+    alias(libs.plugins.metadata)
 }
 
 group = "com.github.sgtsilvio.gradle"
 description = "Gradle plugin that configures sensible defaults"
+
+metadata {
+    readableName.set("Gradle Defaults Plugin")
+    license {
+        apache2()
+    }
+    developers {
+        register("SgtSilvio") {
+            fullName.set("Silvio Giebl")
+        }
+    }
+    github {
+        org.set("SgtSilvio")
+        repo.set("gradle-defaults")
+        issues()
+    }
+}
 
 java {
     toolchain {
@@ -22,15 +40,15 @@ gradlePlugin {
     plugins {
         create("defaults") {
             id = "$group.$name"
-            displayName = "Gradle defaults plugin"
+            displayName = metadata.readableName.get()
             description = project.description
-            implementationClass = "$group.defaults.DefaultsPlugin"
+            implementationClass = "$group.$name.DefaultsPlugin"
         }
     }
 }
 
 pluginBundle {
-    website = "https://github.com/SgtSilvio/gradle-defaults"
-    vcsUrl = "https://github.com/SgtSilvio/gradle-defaults.git"
+    website = metadata.url.get()
+    vcsUrl = metadata.scm.get().url.get()
     tags = listOf("defaults", "normalization", "utf8")
 }
