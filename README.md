@@ -2,9 +2,10 @@
 
 [![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/com.github.sgtsilvio.gradle.defaults?color=brightgreen&style=for-the-badge)](https://plugins.gradle.org/plugin/com.github.sgtsilvio.gradle.defaults)
 
-Gradle plugin that automatically configures sensible defaults.
+Gradle plugin that automatically configures sensible defaults:
 - UTF 8 for Java compilation and Javadoc
 - Reproducible artifacts
+- Granular test reports per test case (method instead of class)
 
 ## How to Use
 
