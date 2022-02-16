@@ -1,4 +1,4 @@
-package com.github.sgtsilvio.gradle.defaults
+package io.github.sgtsilvio.gradle.defaults
 
 import org.gradle.api.Plugin
 import org.gradle.api.Project
