@@ -1,6 +1,7 @@
 # Gradle Defaults Plugin
 
 [![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/io.github.sgtsilvio.gradle.defaults?color=brightgreen&style=for-the-badge)](https://plugins.gradle.org/plugin/io.github.sgtsilvio.gradle.defaults)
+[![GitHub](https://img.shields.io/github/license/sgtsilvio/gradle-defaults?color=brightgreen&style=for-the-badge)](LICENSE)
 
 Gradle plugin that automatically configures sensible defaults:
 - UTF 8 for Java compilation and Javadoc
