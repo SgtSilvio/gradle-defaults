@@ -36,18 +36,15 @@ repositories {
 }
 
 gradlePlugin {
+    website.set(metadata.url)
+    vcsUrl.set(metadata.scm.get().url)
     plugins {
         create("defaults") {
             id = "$group.$name"
+            implementationClass = "$group.$name.DefaultsPlugin"
             displayName = metadata.readableName.get()
             description = project.description
-            implementationClass = "$group.$name.DefaultsPlugin"
+            tags.set(listOf("defaults", "normalization", "utf8"))
         }
     }
-}
-
-pluginBundle {
-    website = metadata.url.get()
-    vcsUrl = metadata.scm.get().url.get()
-    tags = listOf("defaults", "normalization", "utf8")
 }
