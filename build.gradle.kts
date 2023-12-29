@@ -10,24 +10,24 @@ group = "io.github.sgtsilvio.gradle"
 description = "Gradle plugin that configures sensible defaults"
 
 metadata {
-    readableName.set("Gradle Defaults Plugin")
+    readableName = "Gradle Defaults Plugin"
     license {
         apache2()
     }
     developers {
         register("SgtSilvio") {
-            fullName.set("Silvio Giebl")
+            fullName = "Silvio Giebl"
         }
     }
     github {
-        org.set("SgtSilvio")
+        org = "SgtSilvio"
         issues()
     }
 }
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(8))
+        languageVersion = JavaLanguageVersion.of(8)
     }
 }
 
@@ -36,15 +36,15 @@ repositories {
 }
 
 gradlePlugin {
-    website.set(metadata.url)
-    vcsUrl.set(metadata.scm.get().url)
+    website = metadata.url
+    vcsUrl = metadata.scm.get().url
     plugins {
         create("defaults") {
             id = "$group.$name"
             implementationClass = "$group.$name.DefaultsPlugin"
             displayName = metadata.readableName.get()
             description = project.description
-            tags.set(listOf("defaults", "normalization", "utf8"))
+            tags = listOf("defaults", "normalization", "utf8")
         }
     }
 }
