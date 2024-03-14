@@ -2,6 +2,7 @@
 
 [![Gradle Plugin Portal](https://img.shields.io/gradle-plugin-portal/v/io.github.sgtsilvio.gradle.defaults?color=brightgreen&style=for-the-badge)](https://plugins.gradle.org/plugin/io.github.sgtsilvio.gradle.defaults)
 [![GitHub](https://img.shields.io/github/license/sgtsilvio/gradle-defaults?color=brightgreen&style=for-the-badge)](LICENSE)
+[![GitHub Workflow Status (with branch)](https://img.shields.io/github/actions/workflow/status/sgtsilvio/gradle-defaults/check.yml?branch=master&style=for-the-badge)](https://github.com/SgtSilvio/gradle-defaults/actions/workflows/check.yml?query=branch%3Amaster)
 
 Gradle plugin that automatically configures sensible defaults:
 - UTF 8 for Java compilation and Javadoc
