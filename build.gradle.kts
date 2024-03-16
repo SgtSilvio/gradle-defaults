@@ -7,10 +7,10 @@ plugins {
 }
 
 group = "io.github.sgtsilvio.gradle"
-description = "Gradle plugin that configures sensible defaults"
 
 metadata {
     readableName = "Gradle Defaults Plugin"
+    description = "Gradle plugin that configures sensible defaults"
     license {
         apache2()
     }
