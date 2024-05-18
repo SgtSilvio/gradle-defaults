@@ -36,14 +36,10 @@ repositories {
 }
 
 gradlePlugin {
-    website = metadata.url
-    vcsUrl = metadata.scm.get().url
     plugins {
         create("defaults") {
             id = "$group.$name"
             implementationClass = "$group.$name.DefaultsPlugin"
-            displayName = metadata.readableName.get()
-            description = project.description
             tags = listOf("defaults", "normalization", "utf8")
         }
     }
