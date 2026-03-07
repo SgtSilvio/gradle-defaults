@@ -13,6 +13,6 @@ Gradle plugin that automatically configures sensible defaults:
 
 ```kotlin
 plugins {
-    id("io.github.sgtsilvio.gradle.defaults") version "0.2.0"
+    id("io.github.sgtsilvio.gradle.defaults") version "0.3.0"
 }
 ```
